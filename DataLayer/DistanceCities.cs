@@ -8,20 +8,6 @@ namespace DataLayer
 {
     public static class DistanceCities
     {
-        public static int[,,] kmList = new int[,,]
-        {
-            {{44,6,652}},
-            {{44,17,1304}},
-            {{44,17,1304}},
-            {{44,34,1103}},
-            {{44,35,1190}},
-            {{6,17,665}},
-            {{6,34,453}},
-            {{6,35,584}},
-            {{17,34,316}},
-            {{17,35,327}},
-            {{34,35,566}}
-        };
 
         public static IDictionary<(int, int), int> cities = new System.Collections.Generic.Dictionary<(int, int), int>()
         {
