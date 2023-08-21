@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DataLayer;
+using EntityLayer.Concrete.Vehicles;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +10,7 @@ namespace EntityLayer.Abstract
 {
     public class Operation
     {
-        public IVehicle Vehicle { get; set; }
+        public IVehicle Vhc { get; set; }
 
         public IOrder Order { get; set; }
 
@@ -16,13 +18,15 @@ namespace EntityLayer.Abstract
 
         public IPerson Person { get; set; } 
 
-        public void loadOnWay()
+        public void LoadOnWay(Vehicle.Types type, int StartingPoint, int EndingPoint)
         {
-            Console.WriteLine("Yük Yola Çıktı. \n Araç Markası: " + Vehicle.Name + "\n Ödemesi Yapıldı mı?: " + 
+            var value = DistanceCities.KmList[(StartingPoint, EndingPoint)]; 
+
+            Console.WriteLine("Yük Yola Çıktı. \n Araç Markası: " + Vhc.Name + "\n Araç Tipi: " + type + "\n KM başına yakıt: " + (int)type + "\n Yol Ücreti: " + value + "\n Total Masraf: " + (int)type * value +  "\n Ödemesi Yapıldı mı?: " + 
                 Order.IsPayment.ToString() + "\n Yükü: " + Cargo.Name + "\n Şoför adı: " + Person.Name + " Maaşı: " + Person.Salary.ToString());
         }
 
-        public void loadIsArrived()
+        public void LoadIsArrived()
         {
             Console.WriteLine("Yük yerine ulaştı.");
 

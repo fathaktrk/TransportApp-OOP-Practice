@@ -17,7 +17,7 @@ person.ID = 1;
 person.Name = "Fatih Aktürk";
 Operation opr = new Operation();
 
-opr.Vehicle = vehicle;
+opr.Vhc = vehicle;
 opr.Order = order;
 opr.Cargo = cargo;
 opr.Person = person;
@@ -28,7 +28,4 @@ opr.loadIsArrived(); //YÜK YERİNE ULAŞTI
 opr.Order.applyPayment(); //ÖDEME TAMAMLANDI
 */
 
-
-
-//2 Şehir arası km hesaplama denemeleri
-Console.WriteLine(DistanceCities.cities[(44,17)]);
+opr.LoadOnWay(Vehicle.Types.Train,44,6);

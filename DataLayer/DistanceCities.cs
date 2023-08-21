@@ -9,7 +9,7 @@ namespace DataLayer
     public static class DistanceCities
     {
 
-        public static IDictionary<(int, int), int> kmList = new System.Collections.Generic.Dictionary<(int, int), int>()
+        public static IDictionary<(int, int), int> cities = new System.Collections.Generic.Dictionary<(int, int), int>()
         {
             {(44,6),652},
             {(44,17),1304},
@@ -23,7 +23,7 @@ namespace DataLayer
             {(34,35),566}
         };
 
-        public static IDictionary<int, string> cityNames = new Dictionary<int, string>()
+        public static IDictionary<int, string> CityNames = new Dictionary<int, string>()
         {
              {44, "Malatya"},
              {6, "Ankara"},
