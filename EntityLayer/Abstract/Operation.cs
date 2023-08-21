@@ -29,7 +29,7 @@ namespace EntityLayer.Abstract
         public void LoadIsArrived()
         {
             Console.WriteLine("Yük yerine ulaştı.");
-
+            Console.WriteLine("Fatih");
         }
 
     }
