@@ -10,7 +10,7 @@
   <li>Temiz kod</li>
 </ul>
 
-<h2> Skills expected to be acquired and acquired from the project; </h2>
+<h2> Skills expected to be acquired from the project; </h2>
 
 <ul>
   <li>Working with static collections and caching basics,</li>
