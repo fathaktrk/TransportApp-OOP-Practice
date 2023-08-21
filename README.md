@@ -14,7 +14,7 @@
 
 <ul>
   <li>Working with static collections and caching basics,</li>
-  <li>The basis of object-oriented structures,</li>
+  <li>The basics of object-oriented structures,</li>
   <li>Compliance with SOLID principles,</li>
   <li>N-Tier Architect structure,</li>
   <li>Clean code</li>
