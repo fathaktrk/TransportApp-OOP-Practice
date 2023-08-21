@@ -21,11 +21,18 @@ opr.Vhc = vehicle;
 opr.Order = order;
 opr.Cargo = cargo;
 opr.Person = person;
-/*
-opr.loadOnWay(); //YÜK YOLA ÇIKTI
-Thread.Sleep(5000); //5 SANİYE ARA
-opr.loadIsArrived(); //YÜK YERİNE ULAŞTI
-opr.Order.applyPayment(); //ÖDEME TAMAMLANDI
-*/
 
-opr.LoadOnWay(Vehicle.Types.Train,44,6);
+
+foreach (var item in DistanceCities.CityNames)
+{
+    Console.WriteLine("{0}-{1}",item.Key, item.Value);
+}
+
+Console.WriteLine("Hareket edecek şehrin plakasını giriniz: ");
+int StartingPoint = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Varış şehrinin plakasını giriniz: ");
+int EndingPoint = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("*************");
+opr.LoadOnWay(Vehicle.Types.Truck,StartingPoint,EndingPoint);
+Console.WriteLine("*************");
+opr.LoadIsArrived();

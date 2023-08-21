@@ -22,14 +22,13 @@ namespace EntityLayer.Abstract
         {
             var value = DistanceCities.KmList[(StartingPoint, EndingPoint)]; 
 
-            Console.WriteLine("Yük Yola Çıktı. \n Araç Markası: " + Vhc.Name + "\n Araç Tipi: " + type + "\n KM başına yakıt: " + (int)type + "\n Yol Ücreti: " + value + "\n Total Masraf: " + (int)type * value +  "\n Ödemesi Yapıldı mı?: " + 
-                Order.IsPayment.ToString() + "\n Yükü: " + Cargo.Name + "\n Şoför adı: " + Person.Name + " Maaşı: " + Person.Salary.ToString());
+            Console.WriteLine("Yük Yola Çıktı. \nAraç Markası: " + Vhc.Name + "\nAraç Tipi: " + type + "\nKM başına yakıt: " + (int)type + "\nYol Ücreti: " + value + "\nTotal Masraf: " + (int)type * value +  "\nÖdemesi Yapıldı mı?: " + 
+                Order.IsPayment.ToString() + "\nYükü: " + Cargo.Name + "\nŞoför adı: " + Person.Name + " \nMaaşı: " + Person.Salary.ToString());
         }
 
         public void LoadIsArrived()
         {
             Console.WriteLine("Yük yerine ulaştı.");
-            Console.WriteLine("Fatih");
         }
 
     }

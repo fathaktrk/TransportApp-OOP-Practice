@@ -15,7 +15,7 @@ namespace EntityLayer.Concrete.Vehicles
 
         public enum Types
         {
-            TIR=1, Truck=1, Tanker=2, Train=4
+            TIR=1, Truck=3, Tanker=2, Train=4
         }
     }
 }
