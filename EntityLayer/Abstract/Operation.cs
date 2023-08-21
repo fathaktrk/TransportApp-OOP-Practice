@@ -1,4 +1,5 @@
 ﻿using DataLayer;
+using EntityLayer.Concrete.Cargos;
 using EntityLayer.Concrete.Vehicles;
 using System;
 using System.Collections.Generic;
@@ -18,12 +19,12 @@ namespace EntityLayer.Abstract
 
         public IPerson Person { get; set; } 
 
-        public void LoadOnWay(Vehicle.Types type, int StartingPoint, int EndingPoint)
+        public void LoadOnWay(Vehicle.Types type, Cargo.Types cargoType, int StartingPoint, int EndingPoint)
         {
             var value = DistanceCities.KmList[(StartingPoint, EndingPoint)]; 
 
             Console.WriteLine("Yük Yola Çıktı. \nAraç Markası: " + Vhc.Name + "\nAraç Tipi: " + type + "\nKM başına yakıt: " + (int)type + "\nYol Ücreti: " + value + "\nTotal Masraf: " + (int)type * value +  "\nÖdemesi Yapıldı mı?: " + 
-                Order.IsPayment.ToString() + "\nYükü: " + Cargo.Name + "\nŞoför adı: " + Person.Name + " \nMaaşı: " + Person.Salary.ToString());
+                Order.IsPayment.ToString() + "\nYükü: " + Cargo.Name  + "\nYük Tipi: " + cargoType + "\nŞoför adı: " + Person.Name + " \nMaaşı: " + Person.Salary.ToString());
         }
 
         public void LoadIsArrived()
