@@ -1,5 +1,7 @@
-﻿using DataLayer;
+﻿using BusinessManager.Concrete;
+using DataLayer;
 using EntityLayer.Abstract;
+using EntityLayer.Concrete;
 using EntityLayer.Concrete.Cargos;
 using EntityLayer.Concrete.Orders;
 using EntityLayer.Concrete.Persons;
@@ -16,6 +18,7 @@ IPerson person = new Driver();
 person.ID = 1;
 person.Name = "Fatih Aktürk";
 Operation opr = new Operation();
+OperationManager operationManager = new OperationManager(opr);
 
 opr.Vhc = vehicle;
 opr.Order = order;
@@ -33,6 +36,6 @@ int StartingPoint = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Varış şehrinin plakasını giriniz: ");
 int EndingPoint = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("*************");
-opr.LoadOnWay(Vehicle.Types.Truck,Cargo.Types.DryFood,StartingPoint,EndingPoint);
+operationManager.LoadOnWay(Vehicle.Types.Truck,Cargo.Types.DryFood,StartingPoint,EndingPoint);
 Console.WriteLine("*************");
-opr.LoadIsArrived();
+operationManager.LoadIsArrived();
